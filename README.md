@@ -25,7 +25,7 @@ deactivate
 pip install django
 ```
 
-5. 서버 실행 확인
+5. 서버 실행 확인(종료 `ctrl + c`)
 ```
 python manage.py runserver
 ```
@@ -39,7 +39,7 @@ django-admin startapp <appname>
 - `settings.py`의 `INSTALLED_APPS`에 등록
     `<appname>`을 등록
 
-8. `urs.py`
+8. `urls.py`
 ```python
 from django.urls import path
 from app_intro import views
@@ -51,3 +51,13 @@ urlpatterns = [
 ```
 
 9. `view.py`
+```python
+def index(request):
+    return render(request, 'index.html')
+```
+
+10. template폴더 생성 => index.html 생성
+
+## MTV
+
+![MTV](./assets/MTV.png)
